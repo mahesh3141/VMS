@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1005563288448",
+    "firebase_url": "https://airportvms-7b407.firebaseio.com",
+    "project_id": "airportvms-7b407",
+    "storage_bucket": "airportvms-7b407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005563288448:android:2450298a62ecd0c320bf65",
+        "android_client_info": {
+          "package_name": "com.airport.vms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005563288448-khb4t1r0j0oau14bc3hn4o2csaj21iqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.airport.vms",
+            "certificate_hash": "ada5e1e92320b8cd55f8bd7e98b9da5e6b7dabdc"
+          }
+        },
+        {
+          "client_id": "1005563288448-tio266rs6dbvcl6e9qbvp8ju8m2gjuhe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3f_jeXX10bXyxzmce6Pq8M-pWpyRk4ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005563288448-tio266rs6dbvcl6e9qbvp8ju8m2gjuhe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

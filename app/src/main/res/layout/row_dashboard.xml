@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dist_ten"
+        android:layout_marginEnd="@dimen/dist_ten"
+        android:layout_marginTop="@dimen/dist_five"
+        android:layout_marginBottom="@dimen/dist_two"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dist_five"
+        app:cardElevation="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="@dimen/dist_five"
+            android:text="sdgfssgsggs"
+            app:fontFamily="@font/font_default"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtPassengerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="@dimen/dist_two"
+        android:paddingBottom="@dimen/dist_two"
+        android:paddingStart="@dimen/dist_ten"
+        android:paddingEnd="@dimen/dist_ten"
+        android:text="5454654"
+        app:fontFamily="@font/font_default"
+        android:textStyle="normal"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_14"/>
+
+</LinearLayout>

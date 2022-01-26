@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03DAC5</color> <!--#6200EE-->
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="offwhite">#F9F9F9</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_alpha">#AA000000</color>
+    <color name="redColor">#ff0000</color>
+    <color name="gray">#808080</color>
+    <color name="grey1">#CACACA</color>
+    <color name="lightgray">#b0b2b2</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_fragment">#EAEAEA</color>
+    <color name="gap_roomSelection">#E7E7E7</color>
+    <color name="offWhite">#FCFCFC</color>
+    <color name="green">#01AC4E</color>
+    <color name="light_green">#8CC540</color>
+    <color name="yellow">#F8DE29</color>
+    <color name="blue">#2F476D</color>
+    <color name="text_color">#434343</color>
+    <color name="text_label">#727272</color>
+    <color name="text_bottom_line">#b0b0b2b2</color>
+    <color name="actionbar_bg">#00308F</color>
+    <color name="orange">#EE7933</color>
+    <color name="text_bold">#444444</color>
+    <color name="text_normal">#666666</color>
+    <color name="text_blue">#125ba4</color>
+    <color name="color_cancellation_policy">#E21D64</color>
+    <color name="rejected">#BE524F</color>
+    <color name="confirmed">#009933</color>
+    <color name="vouchered">#0070ce</color>
+    <color name="cancelled">#ff6c68</color>
+    <color name="on_request">#ffc743</color>
+    <color name="yellow_highlight">#fff8B9</color>
+    <color name="in_process_cancel">#002c7c</color>
+    <color name="light_divider_color">#ededed</color>
+    <color name="flight_list_bg">#fbf9f9</color>
+    <color name="light_grey">#ECECEC</color>
+    <color name="trans">#AA494747</color>
+</resources>

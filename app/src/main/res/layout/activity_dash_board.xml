@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.DashBoardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="@dimen/dist_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgSync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_sync"
+                android:layout_marginEnd="@dimen/dist_ten"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgMenu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgVipScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_videocam"
+                android:layout_marginEnd="@dimen/dist_ten"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgSync"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dist_ten"
+                android:text="hi welcome"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dist_twenty"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_menu"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLocation"
+        android:textSize="@dimen/font_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dist_ten"
+        android:layout_marginTop="@dimen/dist_five"
+        android:layout_marginBottom="@dimen/dist_five"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toBottomOf="@+id/btnSendQR"
+        app:layout_constraintTop_toTopOf="@+id/btnSendQR"/>
+
+    <Button
+        android:id="@+id/btnSendQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dist_ten"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/scanQR"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dist_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocation">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dist_180"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_dot"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dist_five"
+            android:backgroundTint="@color/grey1"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="@dimen/dist_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintBottom_toTopOf="@+id/dashBoardFooter"/>
+
+    <Button
+        android:id="@+id/btnQrScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dist_ten"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/scanQR"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/dashBoardFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dist_two"
+            android:layout_marginBottom="@dimen/dist_three"
+            android:backgroundTint="@color/offWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:id="@+id/llHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dist_ten"
+                    android:paddingEnd="@dimen/dist_ten">
+
+                    <View
+                        android:id="@+id/vbarHotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dist_five"
+                        android:background="@color/light_green"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtBookHotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dist_ten"
+                        android:drawableTop="@drawable/ic_home"
+                        android:gravity="center"
+                        android:text="@string/tab_home"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFlight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dist_ten"
+                    android:paddingEnd="@dimen/dist_ten">
+
+                    <View
+                        android:id="@+id/vbarFlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dist_five"
+                        android:background="@color/light_green"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtFlightSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dist_ten"
+                        android:drawableTop="@drawable/ic_flight"
+                        android:gravity="center"
+                        android:text="@string/tab_flights"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFlightInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dist_ten"
+                    android:paddingEnd="@dimen/dist_ten">
+
+                    <View
+                        android:id="@+id/vbarSightSeeing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dist_five"
+                        android:background="@color/light_green"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtSightSeeing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dist_ten"
+                        android:drawableTop="@drawable/ic_info"
+                        android:gravity="center"
+                        android:text="@string/tab_flightInfo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llHelp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dist_ten"
+                    android:paddingEnd="@dimen/dist_ten">
+
+                    <View
+                        android:id="@+id/vbarTransfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dist_five"
+                        android:background="@color/light_green"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtTransfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dist_ten"
+                        android:drawableTop="@drawable/ic_help"
+                        android:gravity="center"
+                        android:text="@string/tab_help"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
